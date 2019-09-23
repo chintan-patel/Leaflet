@@ -67,9 +67,8 @@ export var Tap = Handler.extend({
 				this._simulateEvent('contextmenu', first);
 			}
 		}, this), 1000);
-
-		this._simulateEvent('mousedown', first);
-
+		// This is to fix the iOS Safari issue for pop-up not working
+		this._simulateEvent('click', first);
 		DomEvent.on(document, {
 			touchmove: this._onMove,
 			touchend: this._onUp
