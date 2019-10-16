@@ -38,7 +38,7 @@ export default {
 	output: [
 		{
 			file: pkg.main,
-			format: 'umd',
+			format: 'iife',
 			name: 'L',
 			banner: banner,
 			outro: outro,
